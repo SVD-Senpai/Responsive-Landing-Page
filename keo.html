@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyBrand — Innovative Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+      padding-top: 80px;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2c3e50;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+    .logo {
+      color: #ecf0f1;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #e67e22;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e67e22;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+    .btn-primary {
+      background-color: #e67e22;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #cf711f;
+    }
+    .scrolled {
+      background-color: #1a252f !important;
+    }
+    .hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover no-repeat;
+      color: white;
+      padding: 150px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .sections {
+      padding: 60px 40px;
+      background-color: #fff;
+    }
+
+    .sections h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .sections p {
+      max-width: 700px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+  <header id="main-header">
+    <a href="#" class="logo">MyBrand</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="btn-primary">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Empowering Your Business</h1>
+      <p>We deliver innovative solutions that help you achieve more with technology, creativity, and expertise.</p>
+      <a href="#" class="btn-primary">Explore Our Services</a>
+    </section>
+
+    <section class="sections">
+      <h2>Our Features</h2>
+      <p>We offer a wide range of features including custom software development, AI-powered analytics, cloud integrations, and 24/7 support — all tailored to fit your business needs.</p>
+    </section>
+
+    <section class="sections" style="background-color: #f9f9f9;">
+      <h2>Why Choose Us</h2>
+      <p>Our team combines technical excellence with a human touch. We focus on creating solutions that are not only technically sound but also intuitive and user-friendly.</p>
+    </section>
+
+    <section class="sections">
+      <h2>Contact Us</h2>
+      <p>Ready to start your journey with us? Contact our team today and let’s build something amazing together!</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 MyBrand. All rights reserved.
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
